@@ -1,7 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+  box-sizing: content-box;
 }
 
 body {
@@ -10,6 +15,7 @@ body {
   font-weight: 400;
   font-style: normal;
   overflow-x: hidden;
+  padding: 0 0 44px;
 }
 
 .container {
@@ -17,30 +23,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   padding: 0 40px;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 576px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1023px) {
-  .container {
-    max-width: 1023px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1140px;
-  }
+  max-width: 1220px;
 }
 
 h1 {
@@ -90,12 +73,12 @@ h4 {
 
 .header {
   background: #fff;
+  padding: 16px 40px 13px;
 
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 40px 13px;
   }
 
   .logo {
@@ -109,11 +92,11 @@ h4 {
     display: flex;
     align-items: center;
     gap: 2rem;
+  }
 
-    .flag {
-      img {
-        width: 32px;
-      }
+  .flag {
+    img {
+      width: 32px;
     }
   }
 
@@ -136,6 +119,11 @@ h4 {
         }
       }
     }
+  }
+
+  button {
+    border: none;
+    background: none;
   }
 }
 
@@ -209,6 +197,7 @@ h4 {
 .section-2 {
   text-align: center;
   padding: 3.5rem;
+  overflow: hidden;
 
   h1,
   p,
@@ -504,8 +493,8 @@ h4 {
     }
 
     .grid {
-      display: grid;
-      grid-template-columns: 44.8% 55%;
+      display: flex;
+      justify-content: space-between;
       gap: 5.475rem;
       align-items: center;
 
@@ -832,6 +821,11 @@ h4 {
       margin: 0.8rem 0;
     }
 
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
     .stars {
       img {
         max-width: 120px;
@@ -914,11 +908,15 @@ footer {
   padding: 1.75rem 0;
 
   .navs {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    display: flex;
+    justify-content: space-between;
     gap: 2rem;
     margin: 1.625rem 0 0;
     max-width: 1040px;
+
+    & > div {
+      width: 25%;
+    }
 
     h4 {
       text-transform: uppercase;
@@ -961,11 +959,15 @@ footer {
 }
 
 .copyright {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 12rem;
   padding: 1rem 0;
+
+  & > div {
+    width: 50%;
+  }
 
   .logos {
     display: flex;
@@ -975,5 +977,316 @@ footer {
   img {
     display: inline-block;
     max-width: 60px;
+  }
+}
+
+.floating-banner {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 44px;
+  color: #051931;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+  }
+
+  .timer {
+    font-weight: 700;
+    background: #ff8a00;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    color: #fff;
+  }
+}
+.cta-fixed-block,
+section,
+footer {
+  width: 100vw;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  .cta-fixed-block .scrollable,
+  footer,
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  section {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-13 .review {
+    width: calc(33.33% - 1rem);
+  }
+  .section-4 .bg-number,
+  .section-5 .bg-number,
+  .section-6 .bg-number,
+  .section-8 .bg-number {
+    left: 0 !important;
+  }
+  .section-7 .bg-number {
+    right: 0 !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    max-width: 720px;
+  }
+  .section-1 {
+    height: 730px;
+  }
+  .section-1 .cta {
+    margin: 0 auto;
+    padding: 5rem 0 0;
+  }
+  .section-1 .channels .channels-images img {
+    max-width: 70px;
+    height: auto;
+  }
+  .section-2 .video-wrapper {
+    height: 300px;
+  }
+  .section-3 {
+    background-position: 35% center;
+  }
+  .section-3 .link-wrapper {
+    margin: 2rem 0 0;
+    flex-direction: column;
+  }
+  .section-4 .no-pain {
+    align-items: flex-start;
+  }
+  .section-5 .sleep-score {
+    grid-template-columns: 50% 50%;
+  }
+  .section-5 .phone img {
+    max-width: 350px;
+  }
+  .section-5 .phone .score {
+    font-size: 4rem;
+    left: 48%;
+  }
+  .section-7 .positions .grid {
+    align-items: flex-start;
+  }
+  .section-7 .positions .grid .photos {
+    max-width: 40%;
+  }
+  .section-8 .no-pain {
+    align-items: flex-start;
+  }
+  .section-10 .sizes .sizes-img label {
+    width: 48%;
+  }
+  .section-10 .sizes h2,
+  .section-10 .sizes p {
+    max-width: 320px;
+  }
+  .section-12 {
+    height: 600px;
+  }
+  .section-13 .bars {
+    max-width: 600px;
+  }
+  footer .navs {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  footer .navs > div {
+    width: 60%;
+  }
+  .copyright {
+    gap: 0;
+  }
+  .hide-mobile {
+    display: none !important;
+  }
+  .show-mobile {
+    display: block;
+  }
+  nav.show-mobile ul {
+    margin: 3rem 0 1rem;
+    text-align: center;
+    flex-direction: column;
+  }
+  .mobile-menu {
+    height: 0;
+    overflow: hidden;
+    transition: all ease-in 200ms;
+  }
+  input.mobileMenuTrigger {
+    display: none;
+  }
+  input.mobileMenuTrigger:checked + .mobile-menu {
+    height: 150px;
+  }
+  .section-7 .show-mobile,
+  .floating-banner .show-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .header .logo img {
+    max-width: 105px;
+  }
+  .section-1 {
+    height: auto;
+  }
+  .section-1 .channels .channels-images {
+    flex-wrap: wrap;
+  }
+  .cta-fixed-block {
+    display: none;
+  }
+  .section-2 .video-wrapper {
+    height: 160px;
+  }
+  .section-2 .lists {
+    flex-direction: column;
+  }
+  .section-2 .lists > div {
+    width: 100%;
+  }
+  .section-3 .opinion {
+    margin: 0;
+    width: 100%;
+  }
+  .section-4 .no-pain {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .section-5 .sleep-score {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-5 .phone {
+    display: flex;
+    justify-content: center;
+  }
+  .section-6 .pillows {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-7 .positions .grid {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .section-7 .positions .grid .photos {
+    display: block;
+    max-width: 100%;
+  }
+  .section-7 .positions .grid a.show-mobile {
+    margin: 2rem auto -2rem;
+  }
+  .section-8 .no-pain {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-9,
+  .section-10,
+  .section-13 {
+    padding: 3rem 0;
+  }
+  .section-10 .sizes {
+    grid-template-columns: 100%;
+  }
+  .section-10 .sizes .sizes-img {
+    height: 300px;
+  }
+  .section-10 .sizes h2,
+  .section-10 .sizes p {
+    max-width: 100%;
+  }
+  .section-12 {
+    height: 1000px;
+  }
+  .section-12 .tiktok {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+  .section-13 .bar .name {
+    width: 140px;
+  }
+  .section-13 .review {
+    width: 100%;
+    display: none;
+  }
+  .section-13 .review:nth-child(1),
+  .section-13 .review:nth-child(2),
+  .section-13 .review:nth-child(3) {
+    display: block;
+  }
+  .section-14 .faq .item label {
+    display: block;
+  }
+  .section-15 {
+    padding: 8rem 0;
+    text-align: center;
+  }
+  footer .container {
+    padding: 0 40px;
+  }
+  footer .navs {
+    grid-template-columns: 100%;
+  }
+  footer .navs > div {
+    width: 100%;
+  }
+  .footer-logo {
+    display: block;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid rgb(212, 212, 212);
+  }
+  .copyright {
+    display: block;
+    text-align: center;
+  }
+  .copyright > div {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .section-7 .show-mobile,
+  .floating-banner .show-mobile {
+    display: block;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .floating-banner {
+    padding: 0.5rem 2rem 0;
+    height: 80px;
+    font-size: 11px;
+    text-align: center;
+  }
+  .floating-banner .container {
+    height: 40px;
   }
 }
