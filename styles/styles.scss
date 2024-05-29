@@ -60,6 +60,7 @@ h4 {
   color: #fff;
   text-decoration: none;
   transition: all ease 200ms;
+  text-align: center;
 
   &:hover {
     transform: scale(1.05);
@@ -69,6 +70,10 @@ h4 {
 .cta-btn-small {
   padding: 0.5rem 3rem;
   font-size: 1rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .header {
@@ -631,7 +636,7 @@ h4 {
         border: 1px solid rgb(212, 212, 212);
         color: rgb(212, 212, 212);
         padding: 0.625rem 1rem;
-        width: 40%;
+        width: 47%;
         text-align: center;
         cursor: pointer;
         border-radius: 0.5rem;
@@ -675,6 +680,23 @@ h4 {
     text-align: center;
     margin: 0 0 1.5rem;
   }
+
+  .video {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+  }
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .section-12 {
@@ -682,7 +704,7 @@ h4 {
   background: url(../img/section-12/bg.jpg) center no-repeat;
   background-size: cover;
   color: #fff;
-  height: 415px;
+  height: 495px;
   overflow: hidden;
 
   .tiktok {
@@ -981,6 +1003,7 @@ footer {
 }
 
 .floating-banner {
+  visibility: hidden;
   position: fixed;
   z-index: 10;
   bottom: 0;
@@ -990,6 +1013,10 @@ footer {
   width: 100%;
   height: 44px;
   color: #051931;
+
+  &.shown {
+    visibility: visible;
+  }
 
   .container {
     display: flex;
@@ -1011,6 +1038,8 @@ footer {
 section,
 footer {
   width: 100vw;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 .show-mobile {
@@ -1040,11 +1069,11 @@ footer {
   .section-4 .bg-number,
   .section-5 .bg-number,
   .section-6 .bg-number,
-  .section-8 .bg-number {
-    left: 0 !important;
-  }
+  .section-8 .bg-number,
   .section-7 .bg-number {
-    right: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+    max-width: 100px !important;
   }
 }
 
@@ -1121,9 +1150,6 @@ footer {
   .hide-mobile {
     display: none !important;
   }
-  .show-mobile {
-    display: block;
-  }
   nav.show-mobile ul {
     margin: 3rem 0 1rem;
     text-align: center;
@@ -1147,6 +1173,9 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .show-mobile {
+    display: block;
+  }
   h1 {
     font-size: 2.5rem;
   }
@@ -1158,9 +1187,33 @@ footer {
   }
   .section-1 {
     height: auto;
+    background-position: 65% center;
+  }
+  .section-1 .cta {
+    padding: 3rem 0 0;
+  }
+  .section-1 .cta h1 {
+    margin-bottom: 12rem;
   }
   .section-1 .channels .channels-images {
     flex-wrap: wrap;
+  }
+  .section-1 .carousel-images {
+    .slick-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    img {
+      margin: 0 auto;
+      max-height: 50px;
+      max-width: 100%;
+    }
+  }
+  .section-1 .channels p {
+    margin: 1rem 0 2rem;
   }
   .cta-fixed-block {
     display: none;
@@ -1174,21 +1227,82 @@ footer {
   .section-2 .lists > div {
     width: 100%;
   }
+  .section-2 .lists strong {
+    font-size: 1.3rem;
+    text-align: center;
+    display: block;
+  }
+  .section-2 li {
+    list-style: none;
+  }
+  .section-2 li::before {
+    content: "";
+    display: inline-block;
+    height: 19px;
+    width: 18px;
+    background-image: url(../img/list.svg);
+    margin: 0 0.5rem 0 0;
+    position: relative;
+    top: 4px;
+  }
+  .section-3 {
+    background-position: 30% bottom;
+    padding: 3rem 0;
+  }
   .section-3 .opinion {
     margin: 0;
     width: 100%;
   }
+  .section-3 .opinion .top-img {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 2rem;
+
+    img {
+      max-width: 150px;
+    }
+  }
+  .section-3 h1 {
+    text-align: center;
+  }
+  .section-4 {
+    padding: 3rem 0;
+    position: relative;
+  }
+  .section-4 .bg-number {
+    margin: 35px 20px;
+  }
   .section-4 .no-pain {
+    position: static;
     display: flex;
     flex-direction: column-reverse;
+  }
+  .section-5 {
+    padding: 3rem 0 0;
   }
   .section-5 .sleep-score {
     display: flex;
     flex-direction: column;
   }
+  .section-5 .sleep-score .text h2 {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 2.5rem;
+  }
   .section-5 .phone {
     display: flex;
     justify-content: center;
+  }
+  .section-5 label {
+    font-weight: 600;
+  }
+  .section-5 .readmore-p,
+  .section-5 input[type="checkbox"],
+  .section-5 input:checked ~ label {
+    display: none;
+  }
+  .section-5 input:checked ~ .readmore-p {
+    display: block;
   }
   .section-6 .pillows {
     display: flex;
@@ -1205,32 +1319,81 @@ footer {
   .section-7 .positions .grid a.show-mobile {
     margin: 2rem auto -2rem;
   }
+  .section-8 {
+    padding: 1rem 0 3rem;
+  }
   .section-8 .no-pain {
     display: flex;
     flex-direction: column;
+  }
+  .section-8 label {
+    font-weight: 600;
+  }
+  .section-8 .readmore-p,
+  .section-8 input[type="checkbox"],
+  .section-8 input:checked ~ label {
+    display: none;
+  }
+  .section-8 input:checked ~ .readmore-p {
+    display: block;
   }
   .section-9,
   .section-10,
   .section-13 {
     padding: 3rem 0;
   }
+  .section-9 h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 0 0 15rem !important;
+  }
+  .section-9 label {
+    font-weight: 600;
+  }
+  .section-9 .readmore-p,
+  .section-9 input[type="checkbox"],
+  .section-9 input:checked ~ label {
+    display: none;
+  }
+  .section-9 input:checked ~ .readmore-p {
+    display: block;
+  }
+  .section-10 h2 {
+    margin: 0 0 2rem;
+  }
   .section-10 .sizes {
     grid-template-columns: 100%;
   }
   .section-10 .sizes .sizes-img {
-    height: 300px;
+    height: 350px;
+  }
+  .section-10 .sizes .sizes-img label {
+    width: 100%;
+  }
+  .section-10 .sizes .sizes-img .size2 {
+    bottom: -6rem;
   }
   .section-10 .sizes h2,
   .section-10 .sizes p {
     max-width: 100%;
   }
   .section-12 {
-    height: 1000px;
+    padding: 3rem 0 6rem;
+    height: 1200px;
   }
   .section-12 .tiktok {
     display: flex;
     flex-direction: column-reverse;
-    gap: 4rem;
+    gap: 2rem;
+  }
+  .section-12 .tiktok .btn-mobile {
+    position: absolute;
+    top: 650px;
+    left: 0;
+    right: 0;
+  }
+  .section-12 .text {
+    text-align: center;
   }
   .section-13 .bar .name {
     width: 140px;
@@ -1239,17 +1402,37 @@ footer {
     width: 100%;
     display: none;
   }
+  .section-13 label {
+    background: #00b67a;
+    padding: 0.5rem 3rem;
+    margin: 1rem auto 0;
+    color: #fff;
+    border-radius: 0.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
   .section-13 .review:nth-child(1),
   .section-13 .review:nth-child(2),
   .section-13 .review:nth-child(3) {
+    display: block;
+  }
+  .section-13 input:checked ~ label {
+    display: none;
+  }
+  .section-13 input:checked ~ .review {
     display: block;
   }
   .section-14 .faq .item label {
     display: block;
   }
   .section-15 {
-    padding: 8rem 0;
+    padding: 16rem 0 2rem;
     text-align: center;
+    background: url(../img/section-15/bg-mobile.jpg) center top 35% no-repeat;
+    background-size: cover;
+  }
+  .section-15 h2 {
+    font-size: 2.3rem;
   }
   footer .container {
     padding: 0 40px;

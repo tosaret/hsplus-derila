@@ -38,6 +38,12 @@ $(document).ready(function () {
     } else {
       ctaFixedBlock.find(".scrollable").removeClass("fixed");
     }
+
+    if (scrollTop >= $(window).height()) {
+      $(".floating-banner").addClass("shown");
+    } else {
+      $(".floating-banner").removeClass("shown");
+    }
   }
 
   $(window).scroll(handleScroll);
@@ -50,5 +56,34 @@ $(document).ready(function () {
       },
       1000
     );
+  });
+
+  // Timer
+
+  var totalTime = 8 * 60;
+
+  function formatTime(seconds) {
+    var m = Math.floor(seconds / 60);
+    var s = seconds % 60;
+    return (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+  }
+
+  var timerInterval = setInterval(function () {
+    if (totalTime >= 0) {
+      $("#timer").text(formatTime(totalTime));
+      totalTime--;
+    } else {
+      clearInterval(timerInterval);
+    }
+  }, 1000);
+
+  // Carousel
+  $(".carousel-images").slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    arrows: false,
   });
 });

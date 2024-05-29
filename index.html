@@ -8,6 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
@@ -17,6 +23,11 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
     <script src="script.js"></script>
 
     <link rel="stylesheet" href="styles/styles.css" />
@@ -83,7 +94,7 @@
           </div>
         </div>
         <div class="channels">
-          <div class="channels-images">
+          <div class="channels-images hide-mobile">
             <img src="img/section-1/channels/1.png" alt="" />
             <img src="img/section-1/channels/2.png" alt="" />
             <img src="img/section-1/channels/3.png" alt="" />
@@ -91,6 +102,15 @@
             <img src="img/section-1/channels/5.png" alt="" />
             <img src="img/section-1/channels/6.png" alt="" />
             <img src="img/section-1/channels/7.png" alt="" />
+          </div>
+          <div class="carousel-images show-mobile">
+            <div><img src="img/section-1/channels/1.png" alt="" /></div>
+            <div><img src="img/section-1/channels/2.png" alt="" /></div>
+            <div><img src="img/section-1/channels/3.png" alt="" /></div>
+            <div><img src="img/section-1/channels/4.png" alt="" /></div>
+            <div><img src="img/section-1/channels/5.png" alt="" /></div>
+            <div><img src="img/section-1/channels/6.png" alt="" /></div>
+            <div><img src="img/section-1/channels/7.png" alt="" /></div>
           </div>
           <p>Ergonomic Pillow Benefits Mentioned On:</p>
         </div>
@@ -171,6 +191,9 @@
     <section class="section-3">
       <div class="container">
         <div class="opinion">
+          <div class="top-img">
+            <img src="img/section-3/badge.png" alt="" class="show-mobile" />
+          </div>
           <h1>Your Opinion Matters The Most</h1>
           <p>
             At Derila, we take pride in crafting orthopedic pillows that
@@ -186,7 +209,7 @@
             <a href="#reviews" class="reviews-link"
               >Check our happy customers</a
             >
-            <img src="img/section-3/badge.png" alt="" />
+            <img src="img/section-3/badge.png" alt="" class="hide-mobile" />
           </div>
         </div>
       </div>
@@ -194,11 +217,12 @@
 
     <section class="section-4">
       <div class="container">
-        <h1>How We Revolutionized The Good Old Pillow</h1>
+        <h1 class="hide-mobile">How We Revolutionized The Good Old Pillow</h1>
+        <h1 class="show-mobile">No More Pain In The Morning</h1>
         <div class="no-pain">
           <img src="img/section-4/number.png" alt="" class="bg-number" />
           <div>
-            <h2>No More Pain In The Morning</h2>
+            <h2 class="hide-mobile">No More Pain In The Morning</h2>
             <p>
               Some experts say that neck pain is natural and is caused by poor
               posture during the day like working too long at a computer. We
@@ -206,7 +230,9 @@
               lives. That is why we spent years in development to create one of
               the most technically advanced orthopedic memory foam pillows.
             </p>
-            <a href="#" class="cta-btn cta-btn-small">Pay -70% Less</a>
+            <div class="text-center">
+              <a href="#" class="cta-btn cta-btn-small">Pay -70% Less</a>
+            </div>
           </div>
           <img src="img/section-4/right.jpg" alt="" />
         </div>
@@ -224,7 +250,14 @@
               alleviate common sleep disruptors like neck pain and discomfort,
               enabling users to remain in deep sleep stages for longer periods.
             </p>
-            <p>
+            <input
+              type="checkbox"
+              name="readmore-5"
+              id="readmore-5"
+              class="show-mobile"
+            />
+            <label for="readmore-5" class="show-mobile">Read more...</label>
+            <p class="readmore-p">
               The result is a more restorative and rejuvenating sleep
               experience, leaving you feeling energized and refreshed when you
               wake up in the morning.
@@ -323,7 +356,14 @@
               during inhalation and exhalation, resulting in disruptive snoring
               sounds.
             </p>
-            <p>
+            <input
+              type="checkbox"
+              name="readmore-8"
+              id="readmore-8"
+              class="show-mobile"
+            />
+            <label for="readmore-8" class="show-mobile">Read more...</label>
+            <p class="readmore-p">
               The Derila pillow has been meticulously crafted to maintain spinal
               alignment during sleep, thereby widening the airway and enhancing
               the flow of air into the lungs. Consequently, this leads to
@@ -345,23 +385,35 @@
             good night's sleep due to its remarkable ability to provide
             customized support and comfort.
           </p>
-          <p>
+          <input
+            type="checkbox"
+            name="readmore-9"
+            id="readmore-9"
+            class="show-mobile"
+          />
+          <label for="readmore-9" class="show-mobile"
+            >Read more... <br /><br />
+          </label>
+          <p class="readmore-p">
             Derila's memory foam material adapts to the unique contours of your
             head and neck, ensuring proper spinal alignment and reducing
             pressure points.
           </p>
-          <p>
+          <p class="readmore-p">
             Derila’s orthopedic design not only promotes healthier sleep
             postures but also enhances blood circulation, making it an excellent
             choice for those seeking nights comfort.
           </p>
-          <a href="#" class="cta-btn cta-btn-small">Pay -70% Less</a>
+          <div class="text-center">
+            <a href="#" class="cta-btn cta-btn-small">Pay -70% Less</a>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section-10">
       <div class="container">
+        <h2 class="text-center show-mobile">You Asked We Delivered</h2>
         <div class="sizes">
           <div class="sizes-img">
             <div class="img-container">
@@ -374,7 +426,7 @@
             </div>
           </div>
           <div>
-            <h2>You Asked We Delivered</h2>
+            <h2 class="hide-mobile">You Asked We Delivered</h2>
             <p>You can now choose preferred Derila size!</p>
             <p>
               Whether you choose the Plus size or regular Derila orthopedic
@@ -382,7 +434,9 @@
               hypoallergenic properties, and ergonomic support that are the
               hallmarks of our brand.
             </p>
-            <a href="#" class="cta-btn cta-btn-small">Pay -70% Less</a>
+            <div class="text-center">
+              <a href="#" class="cta-btn cta-btn-small">Pay -70% Less</a>
+            </div>
           </div>
         </div>
       </div>
@@ -394,7 +448,6 @@
         <div class="video">
           <iframe
             width="100%"
-            height="630"
             src="https://www.youtube.com/embed/pF79Ihpdz6Q?si=_F_jEqyOVWTy4Vk4"
             title="YouTube video player"
             frameborder="0"
@@ -417,7 +470,7 @@
             />
             <div class="video">
               <video
-                autoplay=""
+                autoplay="true"
                 loop=""
                 playsinline=""
                 muted=""
@@ -436,6 +489,9 @@
               alt=""
               class="screen-icons"
             />
+            <div class="btn-mobile text-center show-mobile">
+              <a href="#" class="cta-btn cta-btn-small"> Pay -70% Less </a>
+            </div>
           </div>
           <div class="text">
             <img src="img/section-12/tiktok.png" alt="" />
@@ -447,7 +503,9 @@
               sleep experiences. If you're ready to upgrade your sleep quality
               and join the trend, our pillows are the perfect choice.
             </p>
-            <a href="#" class="cta-btn cta-btn-small">Pay -70% Less</a>
+            <a href="#" class="cta-btn cta-btn-small hide-mobile">
+              Pay -70% Less
+            </a>
           </div>
         </div>
       </div>
@@ -522,6 +580,13 @@
             </p>
             <img src="img/section-13/3.jpg" alt="" />
           </div>
+          <input
+            style="display: none"
+            type="checkbox"
+            name="moreTestimonials"
+            id="moreTestimonials"
+          />
+          <label class="show-mobile" for="moreTestimonials">Load more</label>
           <div class="review">
             <div><strong>Hellen L. </strong></div>
             <div class="verified">Verified Customer</div>
@@ -1016,7 +1081,7 @@
         </svg>
         <strong>Delivery:</strong>
         <span>5-28-2024 if you order within</span>
-        <div class="timer">06:22</div>
+        <div class="timer" id="timer">08:00</div>
       </div>
     </div>
   </body>
