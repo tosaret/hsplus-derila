@@ -1181,6 +1181,10 @@ footer {
     overflow: hidden;
     transition: all ease-in 200ms;
   }
+  .read-more,
+  .mobile-menu-button {
+    cursor: pointer;
+  }
   input.mobileMenuTrigger {
     display: none;
   }
@@ -1362,6 +1366,9 @@ footer {
   .section-10,
   .section-13 {
     padding: 3rem 0;
+  }
+  .section-9 {
+    background-position: 60% center;
   }
   .section-9 h2 {
     font-size: 2.4rem;
