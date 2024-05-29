@@ -1075,6 +1075,10 @@ footer {
     top: 0 !important;
     max-width: 100px !important;
   }
+
+  .show-mobile.hidden {
+    display: none;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -1091,6 +1095,20 @@ footer {
   .section-1 .channels .channels-images img {
     max-width: 70px;
     height: auto;
+  }
+  .section-1 .carousel-images {
+    .slick-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    img {
+      margin: 0 auto;
+      max-height: 50px;
+      max-width: 100%;
+    }
   }
   .section-2 .video-wrapper {
     height: 300px;
@@ -1150,6 +1168,9 @@ footer {
   .hide-mobile {
     display: none !important;
   }
+  .show-mobile {
+    display: block;
+  }
   nav.show-mobile ul {
     margin: 3rem 0 1rem;
     text-align: center;
@@ -1173,7 +1194,7 @@ footer {
 }
 
 @media (max-width: 767px) {
-  .show-mobile {
+  .show-mobile.hidden {
     display: block;
   }
   h1 {
