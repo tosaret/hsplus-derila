@@ -266,6 +266,7 @@ h4 {
       z-index: 10;
       top: 0;
       width: 100%;
+      max-width: 2000px;
     }
   }
 
@@ -1075,6 +1076,9 @@ footer {
     top: 0 !important;
     max-width: 100px !important;
   }
+  .section-6 .bg-number {
+    top: -110px !important;
+  }
 
   .show-mobile.hidden {
     display: none;
@@ -1271,7 +1275,8 @@ footer {
     top: 4px;
   }
   .section-3 {
-    background-position: 30% bottom;
+    background-image: url(../img/section-3/bg-mobile.jpg);
+    background-position: 30% top;
     padding: 3rem 0;
   }
   .section-3 .opinion {
@@ -1368,7 +1373,8 @@ footer {
     padding: 3rem 0;
   }
   .section-9 {
-    background-position: 60% center;
+    background-image: url(../img/section-9/bg-mobile.jpg);
+    background-position: top center;
   }
   .section-9 h2 {
     font-size: 2.4rem;
