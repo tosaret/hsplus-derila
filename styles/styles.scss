@@ -1216,13 +1216,15 @@ footer {
   }
   .section-1 {
     height: auto;
-    background-position: 65% center;
+    background-image: url(../img/section-1/bg-mobile.webp);
+    background-position: top center;
   }
   .section-1 .cta {
-    padding: 3rem 0 0;
+    padding: 1.25rem 0 0;
   }
   .section-1 .cta h1 {
-    margin-bottom: 12rem;
+    font-size: 1.8rem !important;
+    margin-bottom: 10rem;
   }
   .section-1 .channels .channels-images {
     flex-wrap: wrap;
