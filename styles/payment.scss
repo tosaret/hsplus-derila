@@ -1,0 +1,203 @@
+body {
+  background-color: #f1f4f8;
+}
+
+header {
+  background: url(../img/payment/bg-desktop.jpg) center no-repeat;
+  background-size: cover;
+  padding: 2rem 0 4.425rem;
+}
+
+.text-red {
+  color: #c73126;
+}
+
+.text-green {
+  color: #1ac70e;
+}
+
+.payment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+
+  div {
+    margin: 0.5rem 0;
+
+    .right {
+      align-self: flex-end;
+    }
+  }
+
+  a {
+    display: block;
+    margin: 0 0 1.25rem;
+
+    img {
+      width: 183px;
+      height: 45px;
+    }
+  }
+}
+
+main {
+  margin: 2.825rem 0 0;
+
+  .container {
+    display: grid;
+    grid-template-columns: 48.5% 48.5%;
+    gap: 2rem;
+  }
+
+  .left,
+  .right {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.875rem 1rem;
+  }
+
+  .discount {
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    margin: 0 0 2rem;
+
+    h4 {
+      font-size: 1.1rem;
+      margin: 0 0 0.5rem;
+    }
+  }
+
+  .payment-form {
+    .step {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin: 0 0 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .choose-size {
+      margin: 0 0 1rem;
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      label {
+        display: block;
+        background: url("../img/payment/radio-unchecked.svg") left center
+          no-repeat;
+        background-size: 25px 25px;
+        padding-left: 2rem;
+        line-height: 26px;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      input:checked + label {
+        background: url("../img/payment/radio-checked.svg") left center
+          no-repeat;
+        background-size: 25px 25px;
+      }
+    }
+
+    .choose-qty {
+      margin: 4rem 0 0;
+      display: grid;
+      grid-template-columns: 48% 48%;
+      gap: 1rem;
+
+      .qty-item {
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+        border: 3px solid #fff;
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 0.625rem;
+        position: relative;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .qty {
+          font-size: 40px;
+        }
+        .name {
+          height: 2rem;
+        }
+        .old-price {
+          font-size: 14px;
+          color: #909090;
+          font-weight: normal;
+        }
+        .price {
+          font-size: 22px;
+          color: #1ac70e;
+        }
+
+        .popular {
+          background: #387ff5;
+          color: #fff;
+          font-weight: bold;
+          position: absolute;
+          top: -33px;
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+          text-transform: uppercase;
+        }
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      input:checked + label {
+        border: 3px solid #1ac70e;
+      }
+    }
+  }
+}
+@media (max-width: 1140px) {
+  .container {
+    max-width: 100%;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    padding: 0 20px;
+  }
+  main .container {
+    grid-template-columns: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  main .container {
+    grid-template-columns: 100%;
+  }
+  main .payment-form .choose-qty {
+    grid-template-columns: 100%;
+  }
+  header {
+    height: 425px;
+    background-position: left 60% center;
+  }
+  .payment-header a {
+    margin: 0 0 5rem;
+  }
+}

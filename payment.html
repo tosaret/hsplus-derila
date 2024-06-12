@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/payment.css" />
+
+    <title>Payment</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="payment-header">
+          <div class="left">
+            <a href="/"><img src="img/logo-white.svg" alt="" /></a>
+            <div>TREAT YOURSELF TO</div>
+            <div><strong>A WONDERFUL NIGHT'S SLEEP </strong></div>
+          </div>
+          <div class="right">
+            <img src="img/payment/badge.png" alt="" width="100" height="100" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="left">
+          <div class="discount">
+            <img
+              src="img/payment/discount-badge.png"
+              alt=""
+              width="80"
+              height="80"
+            />
+            <div>
+              <h4 class="text-red">Save -70% when buying a set</h4>
+              <div>
+                <span class="text-red">LIMITED OFFER:</span> Derila is available
+                at a price
+                <span class="text-green"><s>€83.30</s> €24.99</span> subject to
+                purchase of a set of 4 units (discount up to -70% on each unit).
+              </div>
+            </div>
+          </div>
+
+          <form class="payment-form">
+            <div class="step">
+              <img src="img/payment/select.svg" alt="" width="20" height="20" />
+              Step 1: Select a quantity
+            </div>
+            <div class="choose-size">
+              <input type="radio" name="size" id="size1" checked />
+              <label for="size1">Standard Size (30cm, 50cm / 12in, 20in)</label>
+              <input type="radio" name="size" id="size2" />
+              <label for="size2">Plus Size (35cm, 60cm / 14in, 24in)</label>
+            </div>
+
+            <div class="choose-qty">
+              <input type="radio" name="qty" id="qty4" />
+              <label for="qty4" class="qty-item">
+                <div class="popular">Most popular</div>
+                <img src="img/payment/4.png" alt="" />
+                <div>
+                  <div class="qty">4x</div>
+                  <div class="name">Derilla Pillows</div>
+                  <div class="old-price"><s>333.20</s></div>
+                  <div class="price">€99.96</div>
+                </div>
+              </label>
+              <input type="radio" name="qty" id="qty3" />
+              <label for="qty3" class="qty-item">
+                <img src="img/payment/3.png" alt="" />
+                <div>
+                  <div class="qty">3x</div>
+                  <div class="name">Derilla Pillows</div>
+                  <div class="old-price"><s>€299.80</s></div>
+                  <div class="price">€89.94</div>
+                </div>
+              </label>
+              <input type="radio" name="qty" id="qty2" />
+              <label for="qty2" class="qty-item">
+                <img src="img/payment/2.png" alt="" />
+                <div>
+                  <div class="qty">2x</div>
+                  <div class="name">Derilla Pillows</div>
+                  <div class="old-price"><s>€233.20</s></div>
+                  <div class="price">€69.96</div>
+                </div>
+              </label>
+              <input type="radio" name="qty" id="qty1" checked />
+              <label for="qty1" class="qty-item">
+                <img src="img/payment/1.png" alt="" />
+                <div>
+                  <div class="qty">1x</div>
+                  <div class="name">Derilla Pillows</div>
+                  <div class="price">€67.96</div>
+                </div>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="right"></div>
+      </div>
+    </main>
+  </body>
+</html>
