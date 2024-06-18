@@ -11,6 +11,14 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/payment.css" />
 
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="payment.js"></script>
+
     <title>Payment</title>
   </head>
   <body>
@@ -50,7 +58,7 @@
             </div>
           </div>
 
-          <form class="payment-form">
+          <form class="payment-form" id="paymentForm">
             <div class="step">
               <img src="img/payment/select.svg" alt="" width="20" height="20" />
               Step 1: Select a quantity
@@ -106,7 +114,13 @@
             </div>
 
             <div class="text-center">
-              <a href="#" class="cta-btn cta-btn-small">Pay -70% Less</a>
+              <button
+                type="submit"
+                class="cta-btn cta-btn-small"
+                style="border: none"
+              >
+                Pay -70% Less
+              </button>
             </div>
           </form>
         </div>
